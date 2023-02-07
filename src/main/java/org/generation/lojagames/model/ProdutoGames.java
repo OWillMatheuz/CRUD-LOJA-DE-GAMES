@@ -49,8 +49,21 @@ public class ProdutoGames {
 	@JsonIgnoreProperties("produto")
 	private CategoriaGames categoria;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private UsuarioModel usuario;
 	
 	
+	
+	
+	public UsuarioModel getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioModel usuario) {
+		this.usuario = usuario;
+	}
+
 	public CategoriaGames getCategoria() {
 		return categoria;
 	}
@@ -122,14 +135,5 @@ public class ProdutoGames {
 	public void setValorAcessorio(BigDecimal valorAcessorio) {
 		this.valorAcessorio = valorAcessorio;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
